@@ -1,0 +1,86 @@
+html, body {
+    font-size: 16px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.catContainer {
+    position: relative;
+    height: 13rem;
+    width: 13rem;
+    
+    border: dotted 2px black;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    top: 100vh;
+}
+
+.head {
+    position: absolute;
+    animation: head 3s infinite both;
+    height: 7rem;
+    width: 7rem;
+    transform-origin: bottom;
+    z-index: 1;
+}
+
+@keyframes head {
+    0%{transform: rotate(0deg) ;}
+    25%{transform: rotate(-10deg) ;}
+    50%{transform: rotate(0deg) ;}
+    75%{transform: rotate(10deg) ;}
+    100%{transform: rotate(0deg) ;}
+}
+
+.face {
+    position: absolute;
+    height: 7rem;
+    left: 1rem;
+    top: 1rem;
+    z-index: 1;
+}
+
+.eye {
+    position: absolute;
+    height: 1.25rem;
+    top: 4.5rem;
+    animation: eyeMovement 13s infinite both;
+    z-index: 10;
+}
+
+.eye1 {
+    left: 2.2rem;
+}
+
+.eye2 {
+    left: 4rem;
+}
+
+@keyframes eyeMovement {
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(-90deg);
+    }
+    40%{
+        transform: rotate(-180deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: rotate(110deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.body {
+    position: absolute;
+    height: 10rem;
+    left: 2.5rem;
+    bottom: 0rem;
+}
