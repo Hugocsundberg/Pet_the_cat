@@ -1,8 +1,44 @@
 html, body {
-    font-size: 16px;
+    font-size: 30px;
     height: 100vh;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+h1 {
+    margin: 0;
+    position: fixed;
+}
+
+.glasses {
+    height: 7rem;
+    width: 7rem;
+    position: absolute;
+    z-index: 30;
+    /* transform: translate(40px, 100px); */
+}
+
+.tilter {
+    transform-origin: bottom;
+    height: 100%;
+    width: 100%;
+    animation: head 3s infinite both;
+    /* background: rgba(255, 166, 0, 0.26); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tilter img {
+    position: absolute;
+    top: 3rem;
+    height: 65%;
+    width: 65%;
+    object-fit: contain;
+    object-position: center, center;
+    
 }
 
 .catContainer {
@@ -33,6 +69,14 @@ html, body {
     100%{transform: rotate(0deg) ;}
 }
 
+@keyframes headSad {
+    0%{transform: rotate(-30deg) ;}
+    25%{transform: rotate(-40deg) ;}
+    50%{transform: rotate(-30deg) ;}
+    75%{transform: rotate(-40deg) ;}
+    100%{transform: rotate(-30deg) ;}
+}
+
 .face {
     position: absolute;
     height: 7rem;
@@ -47,6 +91,7 @@ html, body {
     top: 4.5rem;
     animation: eyeMovement 13s infinite both;
     z-index: 10;
+    
 }
 
 .eye1 {
@@ -55,6 +100,52 @@ html, body {
 
 .eye2 {
     left: 4rem;
+}
+
+.brow {
+    border-radius: 20px;
+    height: .3rem;
+    width: 1.5rem;
+    background: rgb(196, 123, 15);
+    background: rgb(45, 34, 17);
+    position: absolute;
+    top: 4rem;
+    z-index: 15;
+    transition: 1s;
+}
+
+.brow1 {
+    left: 2rem;
+}
+
+.brow2 {
+    left: 4rem;
+}
+
+.brow1angry {
+    transform: rotate(-20deg) translateY(0.4rem);
+}
+.brow2angry {
+    transform: rotate(20deg) translateY(0.4rem);
+}
+
+.tear {
+    height: 1rem;
+    width: 1rem;
+    top: 5.6rem;
+    left: 2.2rem;
+    background-image: url('tear.png');
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    z-index: 20;
+    opacity: 1;
+    transition: 1s;
+}
+
+.wipeEmTears {
+    transition: 1s;
+    opacity: 0;
 }
 
 @keyframes eyeMovement {
