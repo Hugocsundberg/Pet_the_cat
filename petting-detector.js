@@ -12,6 +12,7 @@ catContainer.addEventListener('touchmove', () => {
 })
 setInterval(() => {
     if (beingPetted) {
+        alert('vibration')
         navigator.vibrate(500, 500, 500, 500, 500)
     }
 }, 5000);
