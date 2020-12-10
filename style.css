@@ -7,6 +7,13 @@ html, body {
     overflow-y: hidden;
     overscroll-behavior: none;
     position: fixed;
+    left: 0;
+    top: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -47,14 +54,13 @@ h1 {
 }
 
 .catContainer {
+    margin-top: 5rem;
     position: relative;
     height: 13rem;
     width: 13rem;
-    
-    border: dotted 2px black;
     left: 50%;
-    transform: translate(-50%, -100%);
-    top: 100vh;
+    transform: translate(-50%);
+    bottom: 10px;
 }
 
 .head {
