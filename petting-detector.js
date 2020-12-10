@@ -10,6 +10,11 @@ catContainer.addEventListener('touchmove', () => {
         catIsGettingAngryTimer()
     }
 })
+setInterval(() => {
+    if (beingPetted) {
+        navigator.vibrate(500, 500, 500, 500, 500)
+    }
+}, 5000);
 
 //If no pet, cat angry
 catIsGettingAngryTimer = () => {
