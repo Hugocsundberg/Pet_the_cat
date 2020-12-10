@@ -6,6 +6,7 @@ html, body {
     overflow-x: hidden;
     overflow-y: hidden;
     overscroll-behavior: none;
+    position: fixed;
 }
 
 h1 {
