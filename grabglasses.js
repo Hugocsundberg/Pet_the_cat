@@ -30,6 +30,5 @@ window.addEventListener('touchmove', (e) => {
     if (isGrabbingGlasses) {
         glasses.style.left = e.touches[0].clientX - grabpositionX + 'px'
         glasses.style.top = e.touches[0].clientY - grabpositionY + 'px'
-        console.log(e.touches[0].clientX - grabpositionX)
     }
 })
