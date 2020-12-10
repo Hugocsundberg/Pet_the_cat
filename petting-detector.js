@@ -1,6 +1,7 @@
 //Being petted resets happytimer
 catContainer.addEventListener('touchmove', () => {
     beingPetted = true
+    navigator.vibrate(5)
     tear.classList.add('wipeEmTears')
     brow1.classList.remove('brow1angry')
     brow2.classList.remove('brow2angry')
