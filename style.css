@@ -11,21 +11,36 @@ html, body {
     left: 0;
     top: 0%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
 }
 
+.background {
+    animation: glassOn 2s linear infinite
+}
+
+@keyframes glassOn {
+    0%{background: rgb(87, 70, 241);}
+    20%{background: red;}
+    40%{background: magenta;}
+    60%{background: skyblue;}
+    80%{background: springgreen;}
+    100%{background: rgb(87, 70, 241);}
+}
+
 h1 {
-    margin: 0;
-    position: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin: 2rem;
+    font-size: 2rem;
 }
 
 .glasses {
-    top: 10%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     height: 7rem;
     width: 7rem;
     position: absolute;
@@ -55,7 +70,7 @@ h1 {
 }
 
 .catContainer {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     position: relative;
     height: 13rem;
     width: 13rem;
@@ -184,4 +199,20 @@ h1 {
     height: 10rem;
     left: 2.5rem;
     bottom: 0rem;
+}
+
+@media (max-width: 500px) {
+    html, body {
+        font-size: 20px;
+    }
+}
+@media (min-width: 800px) {
+    html, body {
+        font-size: 40px;
+    }
+}
+@media (min-width: 1800px) {
+    html, body {
+        font-size: 45px;
+    }
 }
