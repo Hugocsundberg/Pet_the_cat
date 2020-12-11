@@ -36,15 +36,36 @@ html, body {
     100%{background: rgb(87, 70, 241);}
 }
 
+.delayFadeIn {
+    animation: delayFadeIn 2s 2s both;
+}
+
+
+@keyframes delayFadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
 h1 {
     font-family: Satisfy, Geneva, Tahoma, sans-serif;
     position: relative;
-    margin: 2rem;
-    font-size: 2rem;
+    margin: 1rem 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+h2 {
+    font-family: Satisfy, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin: .1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(173, 173, 173);
 }
 
 .glasses {
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 7rem;
@@ -208,7 +229,7 @@ h1 {
     bottom: 0rem;
 }
 
-@media (min-width: 600px) AND (min-height: 700px) {
+@media (min-width: 600px) AND (min-height: 800px) {
     html, body {
         font-size: 25px;
     }
