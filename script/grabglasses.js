@@ -1,9 +1,9 @@
 //Vars
 setTimeout(() => {
-    headStartX = face.parentElement.parentElement.offsetLeft
-    headStartY = face.parentElement.parentElement.offsetTop
-    headEndX = (face.parentElement.parentElement.offsetLeft + face.clientWidth)
-    headEndY = (face.parentElement.parentElement.offsetTop + face.clientHeight)
+    headStartX = face.parentElement.parentElement.offsetLeft + (face.parentElement.parentElement.clientHeight / 4.5)
+    headStartY = face.parentElement.parentElement.offsetTop + (face.parentElement.parentElement.clientHeight / 2.5)
+    headEndX = (face.parentElement.parentElement.offsetLeft + (face.clientWidth * 0.8))
+    headEndY = (face.parentElement.parentElement.offsetTop + (face.clientHeight * 0.95))
 }, 1);
 //Gets where target is 'grabbed'
 const grabPositionTouch = (e) => {
@@ -45,6 +45,9 @@ glasses.addEventListener('mouseup', () => {
 
 //Moves target to mouse's position
 const inputTracker = (e) => {
+    const glassesCenterX = glasses.offsetLeft
+    const glassesCenterY = glasses.offsetTop + (glasses.children[0].children[0].clientHeight / 2)
+    console.log(glassesCenterX, glassesCenterY)
     if (isGrabbingGlasses) {
         if (e.type === 'mousemove') {
             mousePositionX = e.x
@@ -56,9 +59,8 @@ const inputTracker = (e) => {
         glasses.style.left = mousePositionX - grabpositionX + 'px'
         glasses.style.top = mousePositionY - grabpositionY + 'px'
         //Detects if glasses are on cats face. 
-        if (mousePositionX > headStartX && mousePositionX < headEndX && mousePositionY > headStartY && mousePositionY < headEndY) {   //
+        if (glassesCenterX > headStartX && glassesCenterX < headEndX && glassesCenterY > headStartY && glassesCenterY < headEndY) {   //
             isGlassesOnCat = true
-            console.log('ok')
             tear.classList.add('wipeEmTears')
             brow1.classList.remove('brow1angry')
             brow2.classList.remove('brow2angry')
