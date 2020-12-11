@@ -37,7 +37,7 @@ html, body {
 }
 
 .delayFadeIn {
-    animation: delayFadeIn 2s 2s both;
+    animation: delayFadeIn 2s 15s both;
 }
 
 
