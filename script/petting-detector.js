@@ -1,14 +1,30 @@
 //Being petted resets happytimer
-catContainer.addEventListener('touchmove', () => {
-    beingPetted = true
-    tear.classList.add('wipeEmTears')
-    brow1.classList.remove('brow1angry')
-    brow2.classList.remove('brow2angry')
-    catIsHappyTimer = setHappyTimer
-    if (catIsGettingAngryTimerIsActive === false) {
-        catIsGettingAngryTimer()
+happyFunc = (e) => {
+    if (e.type === 'mousemove' && touchingCat === false) {
+        return
+    } else {
+        beingPetted = true
+        tear.classList.add('wipeEmTears')
+        brow1.classList.remove('brow1angry')
+        brow2.classList.remove('brow2angry')
+        catIsHappyTimer = setHappyTimer
+        if (catIsGettingAngryTimerIsActive === false) {
+            catIsGettingAngryTimer()
+        }
     }
-})
+
+}
+
+catContainer.addEventListener('touchmove', happyFunc, { passive: true })
+catContainer.addEventListener('mousedown', () => {
+    touchingCat = true
+    console.log(touchingCat)
+}, { passive: true })
+catContainer.addEventListener('mouseup', () => {
+    touchingCat = false
+    console.log(touchingCat)
+}, { passive: true })
+catContainer.addEventListener('mousemove', happyFunc, { passive: true })
 
 //Makes cat purr
 setInterval(() => {

@@ -21,3 +21,11 @@ let isGlassesOnCat = false
 let beingPetted = false
 let catIsHappyTimer = setHappyTimer
 let catIsGettingAngryTimerIsActive = false
+
+let headStartX
+let headStartY
+let headEndX
+let headEndY
+let mousePositionX
+let mousePositionY
+let touchingCat = false
