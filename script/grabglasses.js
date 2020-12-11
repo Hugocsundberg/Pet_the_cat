@@ -1,8 +1,16 @@
 //Vars
-const headStartX = face.parentElement.parentElement.offsetLeft
-const headStartY = face.parentElement.parentElement.offsetTop
-const headEndX = (face.parentElement.parentElement.offsetLeft + face.clientWidth)
-const headEndY = (face.parentElement.parentElement.offsetTop + face.clientHeight)
+
+let headStartX
+let headStartY
+let headEndX
+let headEndY
+
+setTimeout(() => {
+    headStartX = face.parentElement.parentElement.offsetLeft
+    headStartY = face.parentElement.parentElement.offsetTop
+    headEndX = (face.parentElement.parentElement.offsetLeft + face.clientWidth)
+    headEndY = (face.parentElement.parentElement.offsetTop + face.clientHeight)
+}, 1);
 //Gets where target is 'grabbed'
 glasses.addEventListener('touchstart', (e) => {
     isGrabbingGlasses = true
