@@ -9,9 +9,15 @@ catContainer.addEventListener('touchmove', () => {
         catIsGettingAngryTimer()
     }
 })
+
+//Makes cat purr
 setInterval(() => {
     if (beingPetted) {
-        navigator.vibrate(2000)
+        try {
+            navigator.vibrate(2000)
+        } catch (e) {
+            console.log(e)
+        }
     }
 }, 5000);
 

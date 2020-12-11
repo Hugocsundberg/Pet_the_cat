@@ -144,7 +144,7 @@ h1 {
     width: 1rem;
     top: 5.6rem;
     left: 2.2rem;
-    background-image: url('tear.png');
+    background-image: url('./media/tear.png');
     background-position: center;
     background-size: contain;
     position: absolute;
