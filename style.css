@@ -200,7 +200,7 @@ h2 {
     width: 1rem;
     top: 5.6rem;
     left: 2.2rem;
-    background-image: url('./media/tear.png');
+    background-image: url('./media/tear.svg');
     background-position: center;
     background-size: contain;
     position: absolute;
@@ -259,3 +259,5 @@ h2 {
         font-size: 30px;
     }
 }
+
+
