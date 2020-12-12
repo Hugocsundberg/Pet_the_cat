@@ -21,23 +21,26 @@ html, body {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
+    background: mintcream;
 }
 
 .background {
-    animation: glassOn 2s linear infinite
+    animation: glassOn 1.5s linear infinite 
 }
 
 @keyframes glassOn {
-    0%{background: rgb(87, 70, 241);}
-    20%{background: red;}
-    40%{background: magenta;}
-    60%{background: skyblue;}
-    80%{background: springgreen;}
-    100%{background: rgb(87, 70, 241);}
+    0%{background: rgb(136, 124, 250);}
+    20%{background: rgb(250, 124, 124);}
+    40%{background: rgb(255, 112, 255);}
+    60%{background: rgb(255, 154, 86);}
+    80%{background: rgb(112, 255, 136);}
+    100%{background:  rgb(136, 124, 250);}
 }
 
+
+
 .delayFadeIn {
-    animation: delayFadeIn 2s 15s both;
+    animation: delayFadeIn 2s 12s both;
 }
 
 
@@ -63,6 +66,16 @@ h2 {
     text-align: center;
     color: rgb(173, 173, 173);
 }
+
+.blink {
+    animation: blink .5s infinite both;
+    }
+    
+    @keyframes blink {
+        0%{color: white;}
+        50%{color: magenta;}
+        100%{color: white;}
+    }
 
 .glasses {
     top: 25%;
