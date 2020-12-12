@@ -6,7 +6,7 @@
 
 html, body {
     width: 100vw;
-    font-size: 20px;
+    font-size: 15px;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -52,7 +52,7 @@ html, body {
 h1 {
     font-family: Satisfy, Geneva, Tahoma, sans-serif;
     position: relative;
-    margin: 1rem 2rem;
+    margin: 2rem 2rem 1rem 2rem;
     font-size: 1.6rem;
     text-align: center;
     margin-bottom: .5rem;
@@ -240,6 +240,12 @@ h2 {
     height: 10rem;
     left: 2.5rem;
     bottom: 0rem;
+}
+
+@media (min-width: 400px) AND (min-height: 600px) {
+    html, body {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 600px) AND (min-height: 800px) {
