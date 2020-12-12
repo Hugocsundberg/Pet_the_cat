@@ -18,21 +18,7 @@
    inkscape:export-ydpi="96"
    inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
   <defs
-     id="defs2">
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter1079"
-       x="-0.0010625864"
-       width="1.0021251"
-       y="-0.0010979939"
-       height="1.002196">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.014756921"
-         id="feGaussianBlur1081" />
-    </filter>
-  </defs>
+     id="defs2" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -40,7 +26,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.51624993"
+     inkscape:zoom="0.57702935"
      inkscape:cx="62.986074"
      inkscape:cy="-72.87624"
      inkscape:document-units="mm"
@@ -50,7 +36,7 @@
      inkscape:window-width="1394"
      inkscape:window-height="915"
      inkscape:window-x="1693"
-     inkscape:window-y="10"
+     inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
@@ -118,7 +104,7 @@
      style="display:inline;opacity:1;mix-blend-mode:normal"
      transform="translate(-104.54145,-163.44426)">
     <ellipse
-       style="display:inline;opacity:1;mix-blend-mode:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.67723;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter1079)"
+       style="display:inline;opacity:1;mix-blend-mode:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.67723;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
        id="path989-4"
        cx="62.183029"
        cy="60.955738"
