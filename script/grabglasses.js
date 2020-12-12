@@ -6,10 +6,11 @@ const setHeadDimentions = () => {
     headEndY = (face.parentElement.parentElement.offsetTop + (face.clientHeight * 0.95))
 }
 
+//Vars being reset on resize
 setTimeout(setHeadDimentions, 1);
 window.addEventListener('resize', setHeadDimentions)
 
-//Gets where target is 'grabbed'
+//Set position where target is 'grabbed'
 const grabPositionTouch = (e) => {
     isGrabbingGlasses = true
 
@@ -47,7 +48,7 @@ glasses.addEventListener('mouseup', () => {
     isGrabbingGlasses = false
 })
 
-//Moves target to mouse's position
+//Moves target to mouse's position if grabbed
 const inputTracker = (e) => {
     const glassesCenterX = glasses.offsetLeft
     const glassesCenterY = glasses.offsetTop + (glasses.children[0].children[0].clientHeight / 2)
@@ -63,7 +64,7 @@ const inputTracker = (e) => {
         glasses.style.top = mousePositionY - grabpositionY + 'px'
 
         //Detects if glasses are on cats face. 
-        if (glassesCenterX > headStartX && glassesCenterX < headEndX && glassesCenterY > headStartY && glassesCenterY < headEndY) {   //
+        if (glassesCenterX > headStartX && glassesCenterX < headEndX && glassesCenterY > headStartY && glassesCenterY < headEndY) {
             isGlassesOnCat = true
             tear.classList.add('wipeEmTears')
             brow1.classList.remove('brow1angry')

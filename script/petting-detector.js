@@ -12,7 +12,6 @@ happyFunc = (e) => {
             catIsGettingAngryTimer()
         }
     }
-
 }
 
 catContainer.addEventListener('touchmove', happyFunc, { passive: true })
@@ -30,7 +29,7 @@ setInterval(() => {
         try {
             navigator.vibrate(2000)
         } catch (e) {
-            console.log(e)
+            console.info('Device might not support cat purrs (vibration)')
         }
     }
 }, 5000);
@@ -43,15 +42,14 @@ catIsGettingAngryTimer = () => {
         setTimeout(() => {
             catIsGettingAngryTimer()
         }, 10);
-    } else if (catIsHappyTimer <= 0 && isGlassesOnCat === false) {
+    } else if (catIsHappyTimer <= 0 && isGlassesOnCat === false) { //If timer is out and cat is not wearing glasses, gets angry. 
         beingPetted = false
         brow1.classList.add('brow1angry')
         brow2.classList.add('brow2angry')
         tear.classList.remove('wipeEmTears')
-
         catIsGettingAngryTimerIsActive = false
     }
-
 }
 
+//Initial start of angry-timer
 catIsGettingAngryTimer()
