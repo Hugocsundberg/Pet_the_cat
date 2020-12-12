@@ -18,11 +18,9 @@ happyFunc = (e) => {
 catContainer.addEventListener('touchmove', happyFunc, { passive: true })
 catContainer.addEventListener('mousedown', () => {
     touchingCat = true
-    console.log(touchingCat)
 }, { passive: true })
 catContainer.addEventListener('mouseup', () => {
     touchingCat = false
-    console.log(touchingCat)
 }, { passive: true })
 catContainer.addEventListener('mousemove', happyFunc, { passive: true })
 
