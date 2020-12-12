@@ -8,6 +8,7 @@ const setHeadDimentions = () => {
 
 setTimeout(setHeadDimentions, 1);
 window.addEventListener('resize', setHeadDimentions)
+
 //Gets where target is 'grabbed'
 const grabPositionTouch = (e) => {
     isGrabbingGlasses = true
@@ -50,7 +51,6 @@ glasses.addEventListener('mouseup', () => {
 const inputTracker = (e) => {
     const glassesCenterX = glasses.offsetLeft
     const glassesCenterY = glasses.offsetTop + (glasses.children[0].children[0].clientHeight / 2)
-    console.log(glassesCenterX, glassesCenterY)
     if (isGrabbingGlasses) {
         if (e.type === 'mousemove') {
             mousePositionX = e.x
@@ -61,6 +61,7 @@ const inputTracker = (e) => {
         }
         glasses.style.left = mousePositionX - grabpositionX + 'px'
         glasses.style.top = mousePositionY - grabpositionY + 'px'
+
         //Detects if glasses are on cats face. 
         if (glassesCenterX > headStartX && glassesCenterX < headEndX && glassesCenterY > headStartY && glassesCenterY < headEndY) {   //
             isGlassesOnCat = true
@@ -68,8 +69,14 @@ const inputTracker = (e) => {
             brow1.classList.remove('brow1angry')
             brow2.classList.remove('brow2angry')
             document.body.classList.add('background')
+            document.querySelectorAll('h1, h2').forEach((item) => {
+                item.classList.add('blink')
+            })
 
         } else {
+            document.querySelectorAll('h1, h2').forEach((item) => {
+                item.classList.remove('blink')
+            })
             isGlassesOnCat = false
             beingPetted = false
             catIsHappyTimer = setHappyTimer
