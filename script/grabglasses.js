@@ -1,10 +1,13 @@
 //Vars
-setTimeout(() => {
+const setHeadDimentions = () => {
     headStartX = face.parentElement.parentElement.offsetLeft + (face.parentElement.parentElement.clientHeight / 4.5)
     headStartY = face.parentElement.parentElement.offsetTop + (face.parentElement.parentElement.clientHeight / 2.5)
     headEndX = (face.parentElement.parentElement.offsetLeft + (face.clientWidth * 0.8))
     headEndY = (face.parentElement.parentElement.offsetTop + (face.clientHeight * 0.95))
-}, 1);
+}
+
+setTimeout(setHeadDimentions, 1);
+window.addEventListener('resize', setHeadDimentions)
 //Gets where target is 'grabbed'
 const grabPositionTouch = (e) => {
     isGrabbingGlasses = true
