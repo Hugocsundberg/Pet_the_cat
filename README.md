@@ -9,6 +9,4 @@ Personal focus for the app has been high quality and performance over functional
 * Images are exclusively SVG to maximize crispness and performance. 
 * The app has been tested on Chrome (Desktop), Chrome (Mobile) Tesla built in browser, Brave, Safari (OSX), Safari (IOS). 
 * The app is supported on screen-sizes from iPhone 5 (320 x 568)px to infinity and works in both portrait and landscape.  
-
-I've tried to make the code as readable as possible. Any suggestions on how to make the code more readable is greatly appriciated. 
  
