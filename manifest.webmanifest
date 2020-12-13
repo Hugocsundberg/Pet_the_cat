@@ -3,9 +3,11 @@
   "display": "standalone",
   "background_color": "#fff",
   "description": "The cat is sad. Make him happy",
-  "icons": [{
-    "src": "media/PWAimage.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }],
+  "icons": [
+    {
+      "src": "media/PWAimage.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ]
 }
