@@ -10,3 +10,6 @@ Personal focus for the app has been high quality and performance over functional
 * The app has been tested on Chrome (Desktop), Chrome (Mobile) Tesla built in browser, Brave, Safari (OSX), Safari (IOS). 
 * The app is supported on screen-sizes from iPhone 5 (320 x 568)px to infinity and works in both portrait and landscape.  
  
+#Site has been tested by classmates: 
+* Martin Hansson
+* Jonathan Larsson
